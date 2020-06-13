@@ -29,10 +29,10 @@ class _InformationShopState extends State<InformationShop> {
     String url =
         '${MyConstant().domain}/oraganfood/getUserWhereId.php?isAdd=true&id=$id';
     await Dio().get(url).then((value) {
-      //print('value = $value');
+      print('value = $value');
       var result = json.decode(value.data);
       // แปลงการเข้ารหัสภาษาไทยออกมาก่อน ของเราไม่เข้ารหัสก็แสดงไทยแล้ว
-      // print('result = $result');
+      print('result = $result');
       for (var map in result) {
         setState(() {
           userModel = UserModel.fromJson(map);
@@ -59,11 +59,13 @@ class _InformationShopState extends State<InformationShop> {
             ? MyStyle().showProgress()
             : userModel.nameShop.isEmpty
                 ? showNoData(context)
-                : Text('Have Data'),
+                : showContent(),
         addAndEditButton(),
       ],
     );
   }
+
+  Text showContent() => Text(userModel.nameShop);
 
   Widget showNoData(BuildContext context) {
     return MyStyle().titleCenter('กรุณาเพิ่มข้อมูล', context);

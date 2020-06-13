@@ -81,10 +81,10 @@ class _SignInState extends State<SignIn> {
         '${MyConstant().domain}/oraganfood/getUserWhereUserMaster.php?isAdd=true&User=$user';
     try {
       Response response = await Dio().get(url);
-      print('res = $response');
+      print('res 1234= $response');
 
       var result = json.decode(response.data);
-      print('result =$result');
+      print('result 1234 =$result');
       for (var map in result) {
         UserModel userModel = UserModel.fromJson(map);
         if (password == userModel.password) {

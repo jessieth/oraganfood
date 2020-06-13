@@ -41,5 +41,21 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Need for Upload Picture to Server</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Need for Upload Picture to Server</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Need for Upload Picture to Server</string>
+    
+    <key>io.flutter.embedded_views_preview</key>
+    <true/>
+    
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Requests Access Your Location for Send Food</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Requests Access Your Location for Send Food</string>
+    
 </dict>
 </plist>
